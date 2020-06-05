@@ -1,30 +1,14 @@
 function contar(tex){ 
 	
-	let  texto = toString(tex);
-//	let	 texx = typeof(tex);
-
-
-
-	switch (typeof(tex)){
+	let  texto = tex.toString();
 	
-		case 'string':
-		return ` '${tex}'  tiene ${texto.length} caracteres y es ${typeof(tex)}`		
-		break
-
-		case 'number':
-		return ` '${tex}'  tiene ${texto.length} caracteres y es ${typeof(tex)}`		
-		break
-
-		default:
-		return `El dato de intento ingresar no es valido`
-		break
-
-		}	
-
-
+	if( typeof(tex) === 'string' ||  typeof(tex) === 'number' ){
+		return `${tex} es un ${typeof(tex)} y tiene ${texto.length } caracteres`
+	}else{ 
+		return `no valido`
+	}
 
 }
-
 
 
 
